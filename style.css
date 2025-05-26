@@ -1,0 +1,53 @@
+/* ページ全体のスタイル調整 */
+body {
+    display: flex; /* 要素を横並びや中央揃えにしやすくする */
+    justify-content: center; /* 水平方向中央揃え */
+    align-items: center; /* 垂直方向中央揃え */
+    min-height: 100vh; /* 画面の高さいっぱいに表示 */
+    background-color: #f0f0f0; /* 背景色を薄い灰色に */
+    margin: 0; /* ブラウザデフォルトのマージンをリセット */
+}
+
+/* 信号機の本体のスタイル */
+.traffic-light-container {
+    display: flex; /* 中のランプを横並びにする */
+    background-color: #333; /* 本体の色を濃い灰色に */
+    padding: 20px; /* 内側の余白 */
+    border-radius: 10px; /* 角を丸くする */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* 本体に影をつける */
+}
+
+/* 各ランプ共通のスタイル */
+.light {
+    width: 70px; /* ランプの幅 */
+    height: 70px; /* ランプの高さ */
+    border-radius: 50%; /* 円形にする */
+    margin: 0 10px; /* ランプ間の左右の余白 */
+    cursor: pointer; /* マウスカーソルを指の形にする */
+    border: 2px solid #000; /* ランプの枠線 */
+    transition: background-color 0.2s ease-in-out; /* 背景色の変化を滑らかにする */
+}
+
+/* ランプが赤色のときのスタイル */
+.light.red {
+    background-color: red;
+    box-shadow: 0 0 20px red; /* 赤い光彩を追加 */
+}
+
+/* ランプが黄色のときのスタイル */
+.light.yellow {
+    background-color: yellow;
+    box-shadow: 0 0 20px yellow; /* 黄色い光彩を追加 */
+}
+
+/* ランプが青色のときのスタイル */
+.light.blue {
+    background-color: dodgerblue; /* やや明るい青 */
+    box-shadow: 0 0 20px dodgerblue; /* 青い光彩を追加 */
+}
+
+/* ランプが灰色のとき（消灯状態）のスタイル */
+.light.gray {
+    background-color: #555; /* やや濃い灰色 */
+    box-shadow: none; /* 光彩を消す */
+}
